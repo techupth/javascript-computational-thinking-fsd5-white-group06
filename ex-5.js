@@ -82,3 +82,14 @@ let orders = [
 ];
 
 // Start coding here
+
+let maxValueOrder = orders[0].productPrice * orders[0].productQuantity;
+console.log(maxValueOrder);
+
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].productPrice * orders[i].productQuantity > maxValueOrder) {
+    maxValueOrder = orders[i].productPrice * orders[i].productQuantity;
+  }
+}
+
+console.log(`The most expensive order is order id 8 (${maxValueOrder})`);
